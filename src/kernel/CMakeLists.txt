@@ -5,8 +5,8 @@ add_executable(kernel.elf
 )
 
 # Specify the target architecture and compilation flags
-set(CMAKE_C_FLAGS "-march=rv32ima_zicsr -mabi=ilp32 -nostdlib -fno-builtin -mcmodel=medany -ffreestanding")
-set(CMAKE_ASM_FLAGS "-march=rv32ima_zicsr -mabi=ilp32 -nostdlib -fno-builtin -mcmodel=medany -ffreestanding")
+set(CMAKE_C_FLAGS "-march=rv32ima_zicsr -mabi=ilp32 -nostdlib -fno-builtin -mcmodel=medany -ffreestanding -ggdb")
+set(CMAKE_ASM_FLAGS "-march=rv32ima_zicsr -mabi=ilp32 -nostdlib -fno-builtin -mcmodel=medany -ffreestanding -ggdb")
 
 # Specify the linker script
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/src/kernel/linker.ld)
